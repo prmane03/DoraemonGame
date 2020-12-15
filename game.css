@@ -1,0 +1,58 @@
+* {
+    margin:0px;
+    padding:0px;
+}
+body{
+    background-color: black;
+}
+.game {
+    width: 100%;
+    height: 90%;
+    border: 1px solid black;
+    background-image: url("img/bg03.jpg");
+    background-size: contain;
+}
+#character{
+    width:35px;
+    height: 50px;
+    //background-color: red;
+    position: relative;
+    top: calc(100% - 50px);
+}
+.animate{
+    animation:jump 500ms;
+}
+button{
+    background-color: none;
+    border: none;
+    border-radius: 10px;
+}
+#block{
+    width:20px;
+    border-radius: 10px;
+    height: 20px;
+    background-color: white;
+    position: relative;
+    top:calc(90% - 15px);
+    left: calc(100% - 20px);
+    animation: block 1200ms infinite linear;
+}
+#scorebox{
+    float:right;
+    height: 30px;
+    background-color: black;
+    text-shadow: 1px 1px gold;
+    border-radius: 10px;
+    color: white;
+    padding: 3px;
+}
+@keyframes block{
+    0%{left: calc(100% - 20px)}
+    100%{left:-40px}
+}
+@keyframes jump{
+    0%{top:calc(100% - 50px);}
+    30%{top:calc(100% - 100px);}
+    70%{top:calc(100% - 100px);}
+    100%{top:calc(100% - 50px);}
+}
